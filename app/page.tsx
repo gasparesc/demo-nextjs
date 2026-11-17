@@ -1,69 +1,167 @@
-import Image from "next/image";
+// app/page.tsx  →  URL: /
+// page.tsx es lo que hace que una ruta sea accesible públicamente.
+// Este archivo, al estar directo en app/, corresponde a la página de inicio.
 
-export default function Home() {
+import Link from "next/link";
+
+// Mapa de rutas de la demo: carpeta → URL
+const routes = [
+  { file: "app/page.tsx", url: "/", note: "Esta página" },
+  {
+    file: "app/products/page.tsx",
+    url: "/products",
+    note: "Listado + loading.tsx",
+  },
+  {
+    file: "app/products/[id]/page.tsx",
+    url: "/products/1",
+    note: "Ruta dinámica",
+  },
+  { file: "app/cart/page.tsx", url: "/cart", note: "Carrito" },
+  {
+    file: "app/dashboard/page.tsx",
+    url: "/dashboard",
+    note: "Layout con sidebar",
+  },
+  {
+    file: "app/dashboard/settings/page.tsx",
+    url: "/dashboard/settings",
+    note: "Ruta anidada",
+  },
+  {
+    file: "app/dashboard/reports/page.tsx",
+    url: "/dashboard/reports",
+    note: "Botón que dispara error.tsx",
+  },
+  {
+    file: "app/api/products/route.ts",
+    url: "/api/products",
+    note: "Endpoint de API (JSON)",
+  },
+  { file: "(no existe)", url: "/no-existe", note: "Muestra not-found.tsx" },
+];
+
+// Rutas agregadas en la clase 4: navegación avanzada y catch-all
+const routesClass4 = [
+  {
+    file: "app/catalogo/[[...filtros]]/page.tsx",
+    url: "/catalogo",
+    note: "Optional catch-all (raíz sin filtros)",
+  },
+  {
+    file: "app/catalogo/[[...filtros]]/page.tsx",
+    url: "/catalogo/ropa/remeras",
+    note: "Mismo archivo, 2 filtros + useParams()",
+  },
+  {
+    file: "app/shop/[...slug]/page.tsx",
+    url: "/shop/ropa/remeras/verano",
+    note: "Catch-all leído en el servidor",
+  },
+  {
+    file: "app/shop/[...slug]/page.tsx",
+    url: "/shop",
+    note: "404: el catch-all necesita 1 segmento",
+  },
+  {
+    file: "app/(auth)/login/page.tsx",
+    url: "/login",
+    note: "Grupo de rutas + useRouter()",
+  },
+  {
+    file: "app/(auth)/register/page.tsx",
+    url: "/register",
+    note: "Comparte el layout de (auth)",
+  },
+  {
+    file: "app/products/[id]/page.tsx",
+    url: "/products/4",
+    note: "params (server) vs useParams() (client)",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="flex flex-col gap-10">
+      {/* Hero */}
+      <section className="rounded-2xl bg-violet-600 px-6 py-12 text-white sm:px-10">
+        <p className="text-sm font-medium uppercase tracking-wide text-violet-200">
+          Bootcamp 5.0 · Clase 3
+        </p>
+        <h1 className="mt-2 text-3xl font-bold sm:text-4xl">
+          Bienvenidos a DevStore 🛍️
+        </h1>
+        <p className="mt-3 max-w-xl text-violet-100">
+          Una tienda de ejemplo para entender cómo Next.js arma las rutas a
+          partir de las carpetas dentro de <code>app/</code>.
+        </p>
+        <Link
+          href="/products"
+          className="mt-6 inline-block rounded-lg bg-white px-5 py-2.5 font-semibold text-violet-700 hover:bg-violet-50"
+        >
+          Ver productos →
+        </Link>
+      </section>
+
+      {/* Tablas carpeta → URL */}
+      <RoutesTable
+        title="Clase 3 · Carpetas → URL"
+        subtitle="Cada carpeta es un segmento de la URL. Hacé clic para navegar."
+        rows={routes}
+      />
+      <RoutesTable
+        title="Clase 4 · Navegación avanzada y Catch-All"
+        subtitle="Grupos de rutas, useRouter(), useParams() y segmentos catch-all."
+        rows={routesClass4}
+      />
     </div>
+  );
+}
+
+// Tabla reutilizable: archivo → URL → qué muestra
+function RoutesTable({
+  title,
+  subtitle,
+  rows,
+}: {
+  title: string;
+  subtitle: string;
+  rows: { file: string; url: string; note: string }[];
+}) {
+  return (
+    <section>
+      <h2 className="text-xl font-bold">{title}</h2>
+      <p className="mt-1 text-zinc-600">{subtitle}</p>
+
+      <div className="mt-4 overflow-x-auto rounded-xl border border-zinc-200 bg-white">
+        <table className="w-full text-left text-sm">
+          <thead className="bg-zinc-100 text-zinc-600">
+            <tr>
+              <th className="px-4 py-3 font-medium">Archivo</th>
+              <th className="px-4 py-3 font-medium">URL</th>
+              <th className="px-4 py-3 font-medium">Qué muestra</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((route) => (
+              <tr key={route.url} className="border-t border-zinc-100">
+                <td className="px-4 py-3 font-mono text-xs text-zinc-700">
+                  {route.file}
+                </td>
+                <td className="px-4 py-3">
+                  <Link
+                    href={route.url}
+                    className="font-mono text-violet-700 hover:underline"
+                  >
+                    {route.url}
+                  </Link>
+                </td>
+                <td className="px-4 py-3 text-zinc-600">{route.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
   );
 }
