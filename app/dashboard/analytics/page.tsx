@@ -1,4 +1,7 @@
 // app/dashboard/analytics/page.tsx  →  URL: /dashboard/analytics
+//
+// Ruta ANIDADA: la carpeta "analytics" está adentro de "dashboard", y la URL lo refleja.
+// Los números de ventas son inventados.
 
 const sales = [
   { month: "Julio", amount: 40 },

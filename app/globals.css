@@ -1,6 +1,6 @@
 /* app/globals.css
-   Estilos globales de la app. Se importan una sola vez en app/layout.tsx.
-   Desde Tailwind v4 no hace falta tailwind.config.ts: alcanza con esta línea. */
+   Estilos globales de la app. Se importan una sola vez, en app/layout.tsx.
+   Desde Tailwind v4 ya no necesitás un tailwind.config.ts: con esta línea alcanza. */
 @import "tailwindcss";
 
 @theme inline {

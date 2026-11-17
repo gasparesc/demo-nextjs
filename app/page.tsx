@@ -1,11 +1,14 @@
 // app/page.tsx  →  URL: /
-// page.tsx es lo que hace que una ruta sea accesible públicamente.
-// Este archivo, al estar directo en app/, corresponde a la página de inicio.
+//
+// Un page.tsx es lo que convierte a una carpeta en una página que podés visitar.
+// Como este está directo en app/, es la página de inicio.
+//
+// Abajo vas a ver dos tablas con todas las rutas del proyecto: tocá cualquiera para ir.
 
 import Link from "next/link";
 
-// Mapa de rutas de la demo: carpeta → URL
-const routes = [
+// Rutas de la clase 3: estructura del proyecto y App Router
+const routesClass3 = [
   { file: "app/page.tsx", url: "/", note: "Esta página" },
   {
     file: "app/products/page.tsx",
@@ -41,7 +44,7 @@ const routes = [
   { file: "(no existe)", url: "/no-existe", note: "Muestra not-found.tsx" },
 ];
 
-// Rutas agregadas en la clase 4: navegación avanzada y catch-all
+// Rutas de la clase 4: navegación avanzada y catch-all
 const routesClass4 = [
   {
     file: "app/catalogo/[[...filtros]]/page.tsx",
@@ -86,10 +89,10 @@ export default function HomePage() {
       {/* Hero */}
       <section className="rounded-2xl bg-violet-600 px-6 py-12 text-white sm:px-10">
         <p className="text-sm font-medium uppercase tracking-wide text-violet-200">
-          Bootcamp 5.0 · Clase 3
+          Bootcamp 5.0 · Next.js
         </p>
         <h1 className="mt-2 text-3xl font-bold sm:text-4xl">
-          Bienvenidos a DevStore 🛍️
+          Te damos la bienvenida a DevStore 🛍️
         </h1>
         <p className="mt-3 max-w-xl text-violet-100">
           Una tienda de ejemplo para entender cómo Next.js arma las rutas a
@@ -107,7 +110,7 @@ export default function HomePage() {
       <RoutesTable
         title="Clase 3 · Carpetas → URL"
         subtitle="Cada carpeta es un segmento de la URL. Hacé clic para navegar."
-        rows={routes}
+        rows={routesClass3}
       />
       <RoutesTable
         title="Clase 4 · Navegación avanzada y Catch-All"

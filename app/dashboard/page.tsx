@@ -1,4 +1,7 @@
 // app/dashboard/page.tsx  →  URL: /dashboard
+//
+// La página principal del panel. Fijate que el Sidebar no está acá:
+// lo agrega app/dashboard/layout.tsx, que envuelve a todas las páginas del dashboard.
 
 import { getProducts } from "@/lib/products";
 

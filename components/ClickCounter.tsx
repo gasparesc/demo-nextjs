@@ -1,8 +1,12 @@
 // components/ClickCounter.tsx
-// Contador simple con useState.
-// Como está dentro del layout del dashboard, NO se reinicia al navegar
-// entre /dashboard, /dashboard/analytics y /dashboard/settings:
-// el layout no se vuelve a renderizar, así que conserva su estado.
+//
+// Un contador simple con useState.
+//
+// Está dentro del layout del dashboard, así que NO se reinicia cuando navegás
+// entre /dashboard, /dashboard/analytics y /dashboard/settings.
+// ¿Por qué? Porque al cambiar de página, Next.js reemplaza solo la página:
+// el layout queda montado y se acuerda de su estado.
+
 "use client";
 
 import { useState } from "react";

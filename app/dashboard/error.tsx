@@ -1,5 +1,13 @@
-// app/dashboard/error.tsx  →  UI de error del segmento dashboard y sus hijos
-// Los archivos error.tsx SIEMPRE tienen que ser Client Components ("use client").
+// app/dashboard/error.tsx  →  Pantalla de error del dashboard
+//
+// Si alguna página dentro de /dashboard se rompe, Next.js muestra esto en su lugar.
+// El resto del sitio (Navbar, Sidebar) sigue andando como si nada.
+//
+// Recibe dos props:
+//   - error: lo que se rompió.
+//   - retry: una función para volver a intentar mostrar la página.
+//
+// Ojo: los error.tsx SIEMPRE tienen que ser Client Components ("use client").
 
 "use client";
 

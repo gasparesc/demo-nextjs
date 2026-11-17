@@ -1,5 +1,8 @@
 // app/(auth)/register/page.tsx  →  URL: /register
-// Comparte el layout del grupo (auth) con /login.
+//
+// Comparte el layout del grupo (auth) con /login: por eso se ve la misma tarjeta centrada.
+// Al crear la cuenta te manda al login con router.push().
+
 "use client";
 
 import Link from "next/link";

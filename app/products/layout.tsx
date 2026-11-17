@@ -1,4 +1,5 @@
 // app/products/layout.tsx
+//
 // Layout ANIDADO: envuelve a /products y a /products/[id].
 // Queda así:  <RootLayout> → <ProductsLayout> → <Page />
 

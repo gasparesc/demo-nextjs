@@ -1,4 +1,5 @@
 // app/products/[id]/not-found.tsx
+//
 // 404 específico para productos. Se muestra cuando la página llama a notFound(),
 // por ejemplo al entrar a /products/999.
 

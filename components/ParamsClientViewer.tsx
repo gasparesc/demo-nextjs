@@ -1,6 +1,8 @@
 // components/ParamsClientViewer.tsx
+//
 // Muestra cómo leer los parámetros de la URL desde un CLIENT COMPONENT:
 // acá no recibimos `params` como prop, sino que usamos el hook useParams().
+
 "use client";
 
 import { useParams } from "next/navigation";

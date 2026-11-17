@@ -1,4 +1,5 @@
 // app/products/loading.tsx  →  UI de carga
+//
 // Se muestra automáticamente mientras la página de /products (y sus hijas)
 // todavía está cargando. Next.js la envuelve en un <Suspense> por nosotros.
 

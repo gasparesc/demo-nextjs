@@ -1,7 +1,9 @@
 // components/Navbar.tsx
+//
 // "use client" convierte a este componente en un Client Component.
 // Lo necesitamos porque usamos usePathname(), un hook que solo funciona en el navegador,
 // para saber en qué ruta estamos y resaltar el link activo.
+
 "use client";
 
 import Image from "next/image";

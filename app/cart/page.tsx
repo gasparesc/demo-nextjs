@@ -1,5 +1,7 @@
 // app/cart/page.tsx  →  URL: /cart
-// Carrito de ejemplo con datos fijos (todavía no guardamos nada).
+//
+// Un carrito de ejemplo con datos fijos. Todavía no guardamos nada,
+// así que siempre vas a ver los mismos productos.
 
 import Link from "next/link";
 import { formatPrice, getProductById } from "@/lib/products";

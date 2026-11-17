@@ -1,4 +1,5 @@
-// app/catalogo/[[...filtros]]/page.tsx
+// app/catalogo/[[...filtros]]/page.tsx  →  URL: /catalogo y todo lo que venga después
+//
 // OPTIONAL CATCH-ALL: el doble corchete [[...filtros]] atrapa TODAS estas URLs:
 //
 //   /catalogo                        → params = {}                                  (¡la raíz también!)
@@ -7,6 +8,7 @@
 //   /catalogo/ropa/remeras/verano    → params = { filtros: ["ropa", "remeras", "verano"] }
 //
 // Si la carpeta se llamara [...filtros] (un solo corchete), /catalogo a secas daría 404.
+// ¿No te convence? Renombrá la carpeta y probalo.
 //
 // Es un Client Component, así que leemos los parámetros con el hook useParams().
 
@@ -75,7 +77,7 @@ export default function CatalogPage() {
         ))}
       </nav>
 
-      {/* El objeto params tal cual llega: ideal para mostrar en vivo cómo crece el array */}
+      {/* El objeto params tal cual llega. Agregale segmentos a la URL y mirá cómo crece el array */}
       <div className="mt-4 rounded-xl bg-zinc-900 p-4 text-sm text-emerald-300">
         <p className="mb-2 font-sans text-xs uppercase tracking-wide text-zinc-400">
           useParams()

@@ -1,10 +1,12 @@
 // app/(auth)/login/page.tsx  →  URL: /login
+//
 // Navegación ACTIVA con useRouter(): después de una acción (enviar el formulario),
 // mandamos al usuario al dashboard desde el código.
 //
 //   router.push("/dashboard")    → agrega la ruta al historial: con "atrás" volvés al login.
 //   router.replace("/dashboard") → REEMPLAZA el login en el historial: con "atrás" no volvés acá.
 //                                  (es lo que se usa normalmente después de iniciar sesión)
+
 "use client";
 
 import Link from "next/link";

@@ -1,8 +1,13 @@
 // app/layout.tsx  →  LAYOUT RAÍZ
-// - Es OBLIGATORIO y se aplica a TODAS las rutas de la app.
-// - Debe contener las etiquetas <html> y <body>.
-// - La prop `children` es la página (o el layout hijo) que se muestra adentro.
-// Por eso acá ponemos lo que se repite en todo el sitio: Navbar y Footer.
+//
+// Pensalo como el "marco" de toda la app: lo que pongas acá aparece en TODAS las páginas.
+// Por eso es el lugar ideal para la Navbar y el Footer.
+//
+// Dos reglas que tiene que cumplir sí o sí:
+//   - Tiene que existir: Next.js no arranca sin un layout raíz.
+//   - Tiene que tener las etiquetas <html> y <body>.
+//
+// La prop `children` es la página que estás visitando (o el layout que la envuelve).
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -22,7 +27,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DevStore · Demo Next.js",
-  description: "Demo de la clase 3: primeros pasos con Next.js y App Router",
+  description: "Tienda de ejemplo para aprender Next.js y el App Router",
 };
 
 export default function RootLayout({

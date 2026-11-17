@@ -1,4 +1,5 @@
 // app/products/page.tsx  →  URL: /products
+//
 // Es un Server Component asíncrono: se ejecuta en el servidor.
 // Simulamos una demora de 1,5 segundos (como si pidiéramos los datos a una API)
 // para poder ver en acción el archivo loading.tsx.

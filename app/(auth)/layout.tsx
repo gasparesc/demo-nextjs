@@ -1,4 +1,5 @@
 // app/(auth)/layout.tsx
+//
 // GRUPO DE RUTAS: la carpeta (auth) tiene paréntesis, así que NO aparece en la URL.
 //   app/(auth)/login/page.tsx     → /login      (no /auth/login)
 //   app/(auth)/register/page.tsx  → /register

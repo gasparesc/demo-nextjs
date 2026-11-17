@@ -1,4 +1,5 @@
 // app/dashboard/settings/page.tsx  →  URL: /dashboard/settings
+//
 // Ruta ANIDADA: carpeta "settings" dentro de la carpeta "dashboard".
 
 export default function SettingsPage() {

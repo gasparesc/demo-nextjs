@@ -1,10 +1,12 @@
 // components/LinkVsAnchor.tsx
+//
 // Demostración: <Link> de Next.js vs la etiqueta <a> clásica.
 //
 // Este componente vive en el LAYOUT del catálogo, así que su estado (el contador)
 // sobrevive mientras navegamos dentro del catálogo...
 //   - con <Link>: Next.js cambia solo la página → el contador SE MANTIENE.
 //   - con <a>:    el navegador pide la página completa de cero → el contador VUELVE A 0.
+
 "use client";
 
 import Link from "next/link";

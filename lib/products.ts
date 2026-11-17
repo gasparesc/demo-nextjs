@@ -1,6 +1,9 @@
 // lib/products.ts
-// Datos "falsos" (mock). Todavía no tenemos backend, así que los productos
-// viven en este archivo. Más adelante esto se reemplaza por una base de datos o una API.
+//
+// Datos de prueba (también se les dice "mock"). Como todavía no hay backend,
+// los productos viven en este archivo. Más adelante los vas a traer de una base de datos o una API.
+//
+// ¿Querés agregar un producto? Sumalo al array y aparece solo en todo el sitio.
 
 export type Product = {
   id: string;

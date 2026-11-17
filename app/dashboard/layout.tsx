@@ -1,4 +1,5 @@
 // app/dashboard/layout.tsx
+//
 // Layout del dashboard: agrega el Sidebar a TODAS las rutas que están
 // dentro de app/dashboard/ (/dashboard, /dashboard/analytics, /dashboard/settings...).
 //

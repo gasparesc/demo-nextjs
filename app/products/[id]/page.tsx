@@ -1,4 +1,5 @@
 // app/products/[id]/page.tsx  →  URL: /products/1, /products/2, ...
+//
 // Los corchetes [id] crean un SEGMENTO DINÁMICO: una sola página
 // sirve para todos los productos. El valor de la URL llega en `params`.
 // En un Server Component, Next.js nos pasa `params` como PROP (es una Promise, por eso el await).

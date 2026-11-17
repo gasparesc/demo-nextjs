@@ -1,4 +1,5 @@
 // components/ProductCard.tsx
+//
 // Tarjeta reutilizable para mostrar un producto en el listado.
 
 import Link from "next/link";

@@ -1,4 +1,5 @@
 // app/catalogo/layout.tsx
+//
 // Layout del catálogo: menú de categorías + demo de <Link> vs <a>.
 // Envuelve a todas las URLs que atrapa [[...filtros]]: /catalogo, /catalogo/ropa, /catalogo/ropa/remeras...
 

@@ -1,6 +1,8 @@
 // components/Sidebar.tsx
+//
 // Menú lateral del dashboard. Es Client Component porque usa usePathname()
 // para resaltar la sección activa.
+
 "use client";
 
 import Link from "next/link";

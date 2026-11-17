@@ -1,6 +1,8 @@
 // components/CatalogSidebar.tsx
+//
 // Menú de categorías del catálogo. Es navegación "pasiva" (el usuario elige a dónde ir),
 // así que usamos <Link>, no useRouter().
+
 "use client";
 
 import Link from "next/link";

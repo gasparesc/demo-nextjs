@@ -1,4 +1,5 @@
 // components/Footer.tsx
+//
 // Server Component (no tiene "use client"): solo muestra contenido, no necesita interactividad.
 
 export default function Footer() {

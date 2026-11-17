@@ -1,9 +1,11 @@
 // app/dashboard/reports/page.tsx  →  URL: /dashboard/reports
-// Esta página sirve para mostrar cómo funciona error.tsx.
-// Al tocar el botón, el componente lanza un error mientras se renderiza
-// y Next.js muestra app/dashboard/error.tsx en su lugar.
-// Fijate que el Sidebar (del layout) sigue funcionando: el error
-// solo reemplaza el contenido de la página, no todo el sitio.
+//
+// Esta página está hecha para romperse 💥 y que veas cómo funciona error.tsx.
+// Al tocar el botón, el componente lanza un error y Next.js muestra
+// app/dashboard/error.tsx en su lugar.
+//
+// Fijate que el Sidebar sigue funcionando: el error solo reemplaza
+// el contenido de la página, no todo el sitio.
 
 "use client";
 

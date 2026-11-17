@@ -1,6 +1,7 @@
-// app/not-found.tsx  →  UI de "no encontrado" (404)
-// Se muestra cuando el usuario entra a una URL que no existe,
-// por ejemplo /no-existe.
+// app/not-found.tsx  →  Página 404 de todo el sitio
+//
+// Se muestra cuando entrás a una URL que no existe.
+// Probalo: escribí cualquier cosa en la barra de direcciones, como /no-existe.
 
 import Link from "next/link";
 

@@ -1,4 +1,5 @@
 // app/shop/[...slug]/page.tsx
+//
 // CATCH-ALL (obligatorio): [...slug] atrapa uno o más segmentos después de /shop.
 //
 //   /shop               → 404  (¡no hay ningún segmento para atrapar!)

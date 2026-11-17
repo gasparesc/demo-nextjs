@@ -1,7 +1,10 @@
-// proxy.ts (antes se llamaba middleware.ts)
-// Intercepta las solicitudes ANTES de que lleguen a una ruta.
-// Un uso real: redirigir a /login si el usuario no inició sesión.
-// En esta demo solo escribimos en la terminal cada vez que alguien entra al dashboard.
+// proxy.ts  (en versiones anteriores de Next.js se llamaba middleware.ts)
+//
+// Intercepta cada visita ANTES de que llegue a la página.
+// Un uso real: mandar a /login a quien no inició sesión.
+//
+// Acá solo escribimos un mensaje en la terminal cada vez que alguien entra al dashboard.
+// Probalo: navegá por /dashboard y mirá la terminal donde corre `npm run dev`.
 
 import { NextResponse, type NextRequest } from "next/server";
 
