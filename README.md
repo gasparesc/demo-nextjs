@@ -19,7 +19,7 @@ Cada clase tiene su propia guía con un recorrido paso a paso. Te dicen qué abr
 Necesitás tener instalado **Node.js 20.9 o superior**. Podés ver qué versión tenés con `node -v`.
 
 ```bash
-git clone https://github.com/RudeBoyS2/demo-nextjs.git
+git clone https://github.com/gasparesc/demo-nextjs.git
 cd demo-nextjs
 npm install     # solo la primera vez
 npm run dev
