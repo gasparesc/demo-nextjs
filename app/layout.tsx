@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DevStore · Demo Next.js",
+  title: "Leonida Store · Demo Next.js",
   description: "Tienda de ejemplo para aprender Next.js y el App Router",
 };
 

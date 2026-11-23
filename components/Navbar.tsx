@@ -14,6 +14,7 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/products", label: "Productos" },
   { href: "/catalogo", label: "Catálogo" },
+  { href: "/estilos", label: "Estilos" },
   { href: "/cart", label: "Carrito" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/login", label: "Ingresar" },
@@ -31,8 +32,8 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2 font-bold">
           {/* La imagen está en la carpeta /public, por eso la ruta empieza con "/" */}
-          <Image src="/logo.svg" alt="Logo DevStore" width={32} height={32} />
-          DevStore
+          <Image src="/logo.svg" alt="Logo de Leonida Store" width={32} height={32} />
+          Leonida Store
         </Link>
 
         <ul className="flex flex-wrap gap-1">
@@ -42,7 +43,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? "bg-violet-100 text-violet-700"
+                    ? "bg-pink-100 text-pink-700"
                     : "text-zinc-600 hover:bg-zinc-100"
                 }`}
               >

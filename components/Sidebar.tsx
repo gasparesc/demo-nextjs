@@ -32,7 +32,7 @@ export default function Sidebar() {
               href={item.href}
               className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors ${
                 pathname === item.href
-                  ? "bg-violet-600 text-white"
+                  ? "bg-pink-600 text-white"
                   : "text-zinc-700 hover:bg-zinc-100"
               }`}
             >

@@ -16,18 +16,18 @@ export default function LinkVsAnchor() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="mb-6 flex flex-col gap-4 rounded-xl border border-dashed border-violet-300 bg-violet-50 p-4 sm:flex-row sm:items-center">
+    <div className="mb-6 flex flex-col gap-4 rounded-xl border border-dashed border-pink-300 bg-pink-50 p-4 sm:flex-row sm:items-center">
       <div className="flex items-center gap-3">
         <button
           onClick={() => setCount(count + 1)}
-          className="rounded-md bg-violet-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-violet-700"
+          className="rounded-md bg-pink-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-pink-700"
         >
           Sumar +1
         </button>
-        <span className="text-2xl font-bold text-violet-700">{count}</span>
+        <span className="text-2xl font-bold text-pink-700">{count}</span>
       </div>
 
-      <p className="flex-1 text-sm text-violet-900">
+      <p className="flex-1 text-sm text-pink-900">
         Sumá algunos clics y después navegá con cada opción:
       </p>
 

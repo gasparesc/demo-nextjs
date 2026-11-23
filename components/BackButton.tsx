@@ -14,7 +14,7 @@ export default function BackButton() {
   return (
     <button
       onClick={() => router.back()} // igual que tocar "atrás" en el navegador
-      className="text-sm text-violet-700 hover:underline"
+      className="text-sm text-pink-700 hover:underline"
     >
       ← Volver
     </button>

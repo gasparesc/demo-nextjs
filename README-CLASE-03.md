@@ -46,7 +46,7 @@ Navegá por varias páginas: la Navbar de arriba y el Footer de abajo están **s
 
 Ahora fijate en dos detalles:
 
-- El **banner violeta** de envíos gratis solo aparece en [/products](http://localhost:3000/products) y sus páginas hijas. Viene de [app/products/layout.tsx](app/products/layout.tsx).
+- El **banner rosa** de envíos gratis solo aparece en [/products](http://localhost:3000/products) y sus páginas hijas. Viene de [app/products/layout.tsx](app/products/layout.tsx).
 - El **Sidebar** solo aparece en [/dashboard](http://localhost:3000/dashboard). Viene de [app/dashboard/layout.tsx](app/dashboard/layout.tsx).
 
 Un `layout.tsx` adentro de una carpeta solo afecta a esa carpeta y a las que tiene adentro.

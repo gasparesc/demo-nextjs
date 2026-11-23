@@ -1,6 +1,6 @@
-# DevStore · Demo de Next.js
+# Leonida Store · Demo de Next.js
 
-¡Hola! 👋 Esta es **DevStore**, una tienda online de ejemplo para que aprendas Next.js con el **App Router** tocando código de verdad.
+¡Hola! 👋 Esta es **Leonida Store**, una tienda online de ejemplo con temática **Vice City** (autos, motos, ropa y accesorios) para que aprendas Next.js con el **App Router** tocando código de verdad.
 
 No tiene backend: los productos son datos de prueba que viven en un archivo. Así que podés romper, cambiar y probar todo lo que quieras sin miedo.
 
@@ -12,6 +12,7 @@ Cada clase tiene su propia guía con un recorrido paso a paso. Te dicen qué abr
 |---|---|---|
 | 3 | Primeros pasos: estructura del proyecto y App Router | [README-CLASE-03.md](README-CLASE-03.md) |
 | 4 | Navegación avanzada: `<Link>`, `useRouter`, grupos de rutas y catch-all | [README-CLASE-04.md](README-CLASE-04.md) |
+| 5 | Estilos con Tailwind CSS: utility-first, responsive, `hover:`, `dark:` y clases condicionales | [README-CLASE-05.md](README-CLASE-05.md) |
 
 ## Cómo correrlo en tu compu
 
@@ -60,15 +61,20 @@ app/
 │   ├── layout.tsx              → Tarjeta centrada que comparten login y register
 │   ├── login/page.tsx          → /login
 │   └── register/page.tsx       → /register
+├── estilos/
+│   ├── [[...tab]]/page.tsx     → /estilos, /estilos/envios, ...  (laboratorio de Tailwind; la pestaña sale de la URL)
+│   └── practica/page.tsx       → /estilos/practica  (el catálogo sin estilos, para practicar)
 ├── catalogo/
 │   ├── layout.tsx              → Menú de categorías + comparación <Link> vs <a>
 │   └── [[...filtros]]/page.tsx → /catalogo, /catalogo/ropa, /catalogo/ropa/remeras, ...
 └── shop/
     └── [...slug]/page.tsx      → /shop/ropa, /shop/ropa/remeras/verano, ...
 
-components/   → Piezas reutilizables: Navbar, Footer, Sidebar, ProductCard, etc.
+components/   → Piezas reutilizables: Navbar, Footer, Sidebar, ProductCard, Button, etc.
+              components/estilos/ tiene las demos de la clase 5 (una por tema)
 lib/          → products.ts: los datos de prueba y funciones para buscarlos y filtrarlos
-public/       → Archivos estáticos. logo.svg se usa en la Navbar como "/logo.svg"
+public/       → Archivos estáticos. logo.svg se usa en la Navbar como "/logo.svg".
+              public/gta/ tiene las imágenes de los productos y la del inicio
 proxy.ts      → Se ejecuta antes de cada visita a /dashboard/* (mirá la terminal)
 ```
 

@@ -6,6 +6,8 @@
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AddToCartButton from "@/components/AddToCartButton";
+import ProductImage from "@/components/ProductImage";
 import ParamsClientViewer from "@/components/ParamsClientViewer";
 import { formatPrice, getProductById } from "@/lib/products";
 
@@ -24,28 +26,30 @@ export default async function ProductDetailPage({
 
   return (
     <div>
-      <Link href="/products" className="text-sm text-violet-700 hover:underline">
+      <Link href="/products" className="text-sm text-pink-700 hover:underline">
         ← Volver a productos
       </Link>
 
       <div className="mt-4 grid gap-8 rounded-2xl border border-zinc-200 bg-white p-6 md:grid-cols-2">
-        <div className="flex h-64 items-center justify-center rounded-xl bg-zinc-100 text-8xl">
-          {product.emoji}
+        {/* relative + alto fijo: <ProductImage> usa "fill" y se adapta a este contenedor */}
+        <div className="relative h-64 overflow-hidden rounded-xl bg-zinc-100 md:h-full md:min-h-64">
+          <ProductImage product={product} sizes="(min-width: 768px) 50vw, 100vw" />
         </div>
 
         <div className="flex flex-col">
-          <span className="text-sm font-medium uppercase text-violet-600">
+          <span className="text-sm font-medium uppercase text-pink-600">
             {product.category}
           </span>
           <h1 className="mt-1 text-3xl font-bold">{product.name}</h1>
           <p className="mt-3 text-zinc-600">{product.description}</p>
           <p className="mt-6 text-3xl font-bold">{formatPrice(product.price)}</p>
 
-          <Link
-            href="/cart"
-            className="mt-6 rounded-lg bg-violet-600 px-5 py-3 text-center font-semibold text-white hover:bg-violet-700"
-          >
-            Agregar al carrito
+          {/* Clase 5: el mismo botón con clases condicionales que usa ProductCard */}
+          <div className="mt-6">
+            <AddToCartButton stock={product.stock} />
+          </div>
+          <Link href="/cart" className="mt-2 text-center text-sm text-pink-700 hover:underline">
+            Ver carrito →
           </Link>
 
           {/* Clase 4: la misma URL leída de dos formas distintas */}

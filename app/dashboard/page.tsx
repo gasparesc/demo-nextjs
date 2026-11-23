@@ -18,7 +18,7 @@ export default function DashboardPage() {
     <div>
       <h1 className="text-2xl font-bold">Resumen</h1>
       <p className="mt-1 text-zinc-600">
-        Bienvenido al panel de administración de DevStore.
+        Bienvenido al panel de administración de Leonida Store.
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">

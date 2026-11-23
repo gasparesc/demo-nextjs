@@ -15,7 +15,7 @@ export default function CatalogSidebar() {
 
   const linkClass = (href: string) =>
     `block rounded-md px-3 py-1.5 text-sm transition-colors ${
-      pathname === href ? "bg-violet-600 text-white" : "text-zinc-700 hover:bg-zinc-100"
+      pathname === href ? "bg-pink-600 text-white" : "text-zinc-700 hover:bg-zinc-100"
     }`;
 
   return (

@@ -1,6 +1,6 @@
 # Clase 4 · Navegación avanzada y Catch-All
 
-En esta clase sumaste herramientas para moverte entre páginas y para atrapar URLs de cualquier largo. Todo está en el mismo proyecto DevStore de la [clase 3](README-CLASE-03.md), así que no tenés que instalar nada nuevo.
+En esta clase sumaste herramientas para moverte entre páginas y para atrapar URLs de cualquier largo. Todo está en el mismo proyecto Leonida Store de la [clase 3](README-CLASE-03.md), así que no tenés que instalar nada nuevo.
 
 ## Antes de empezar
 
@@ -38,7 +38,7 @@ lib/products.ts                     → (actualizado) productos con categoría y
 
 ## 1. El componente `<Link>`
 
-**Dónde:** [/catalogo](http://localhost:3000/catalogo), en el recuadro violeta de arriba. **Código:** [components/LinkVsAnchor.tsx](components/LinkVsAnchor.tsx).
+**Dónde:** [/catalogo](http://localhost:3000/catalogo), en el recuadro rosa de arriba. **Código:** [components/LinkVsAnchor.tsx](components/LinkVsAnchor.tsx).
 
 1. Tocá **"Sumar +1"** varias veces (por ejemplo, hasta 5).
 2. Tocá **"✅ &lt;Link&gt; a Ropa"**. La página cambia y el contador **sigue en 5**.

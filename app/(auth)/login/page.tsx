@@ -57,14 +57,14 @@ export default function LoginPage() {
         <button
           type="submit"
           value="push"
-          className="rounded-lg bg-violet-600 px-4 py-2.5 font-semibold text-white hover:bg-violet-700"
+          className="rounded-lg bg-pink-600 px-4 py-2.5 font-semibold text-white hover:bg-pink-700"
         >
           Ingresar con router.push()
         </button>
         <button
           type="submit"
           value="replace"
-          className="rounded-lg border border-violet-600 px-4 py-2.5 font-semibold text-violet-700 hover:bg-violet-50"
+          className="rounded-lg border border-pink-600 px-4 py-2.5 font-semibold text-pink-700 hover:bg-pink-50"
         >
           Ingresar con router.replace()
         </button>
@@ -72,7 +72,7 @@ export default function LoginPage() {
 
       <p className="mt-6 text-center text-sm text-zinc-600">
         ¿No tenés cuenta?{" "}
-        <Link href="/register" className="font-medium text-violet-700 hover:underline">
+        <Link href="/register" className="font-medium text-pink-700 hover:underline">
           Registrate
         </Link>
       </p>

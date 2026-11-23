@@ -1,0 +1,19 @@
+/* components/estilos/TraditionalButton.module.css
+
+   Así se estiliza "a la antigua": un archivo .css aparte, con un nombre de clase
+   que tuvimos que INVENTAR (btn-primary--active) y que después hay que ir a buscar.
+
+   El ".module.css" es un CSS Module de Next.js: las clases de este archivo
+   solo afectan al componente que lo importa (no chocan con otras del proyecto). */
+
+.btn-primary--active {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-primary--active:hover {
+  background-color: #1d4ed8;
+}

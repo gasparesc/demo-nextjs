@@ -3,8 +3,9 @@
 // Un page.tsx es lo que convierte a una carpeta en una página que podés visitar.
 // Como este está directo en app/, es la página de inicio.
 //
-// Abajo vas a ver dos tablas con todas las rutas del proyecto: tocá cualquiera para ir.
+// Abajo vas a ver una tabla por clase con todas las rutas del proyecto: tocá cualquiera para ir.
 
+import Image from "next/image";
 import Link from "next/link";
 
 // Rutas de la clase 3: estructura del proyecto y App Router
@@ -83,24 +84,53 @@ const routesClass4 = [
   },
 ];
 
+// Rutas de la clase 5: estilos con Tailwind CSS
+const routesClass5 = [
+  {
+    file: "app/estilos/[[...tab]]/page.tsx",
+    url: "/estilos",
+    note: "Laboratorio: una sección por tema",
+  },
+  {
+    file: "app/estilos/[[...tab]]/page.tsx",
+    url: "/estilos/envios",
+    note: "Mismo archivo: pestaña activa leída con useParams()",
+  },
+  {
+    file: "app/estilos/practica/page.tsx",
+    url: "/estilos/practica",
+    note: "Práctica: el catálogo sin estilos",
+  },
+  {
+    file: "components/ProductCard.tsx",
+    url: "/products",
+    note: "Práctica terminada: grilla + stock",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-10">
       {/* Hero */}
-      <section className="rounded-2xl bg-violet-600 px-6 py-12 text-white sm:px-10">
-        <p className="text-sm font-medium uppercase tracking-wide text-violet-200">
+      {/* Hero con imagen de fondo: relative + overflow-hidden, la imagen con "fill" detrás (-z-10)
+          y un degradado oscuro encima para que el texto blanco se lea bien. */}
+      <section className="relative isolate overflow-hidden rounded-2xl px-6 py-16 text-white sm:px-10 sm:py-24">
+        <Image src="/gta/hero-gta6.jpg" alt="" fill priority sizes="100vw" className="-z-20 object-cover object-[75%_center] md:object-center" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-r from-black/70 via-black/30 to-transparent md:via-black/10" />
+        <p className="text-sm font-medium uppercase tracking-wide text-pink-200">
           Bootcamp 5.0 · Next.js
         </p>
         <h1 className="mt-2 text-3xl font-bold sm:text-4xl">
-          Te damos la bienvenida a DevStore 🛍️
+          Bienvenido a Leonida Store 🌴
         </h1>
-        <p className="mt-3 max-w-xl text-violet-100">
-          Una tienda de ejemplo para entender cómo Next.js arma las rutas a
-          partir de las carpetas dentro de <code>app/</code>.
+        <p className="mt-3 max-w-xl text-pink-100">
+          Autos, motos, ropa y accesorios de Vice City. Una tienda de ejemplo para
+          entender cómo Next.js arma las rutas a partir de las carpetas dentro
+          de <code>app/</code>.
         </p>
         <Link
           href="/products"
-          className="mt-6 inline-block rounded-lg bg-white px-5 py-2.5 font-semibold text-violet-700 hover:bg-violet-50"
+          className="mt-6 inline-block rounded-lg bg-white px-5 py-2.5 font-semibold text-pink-700 hover:bg-pink-50"
         >
           Ver productos →
         </Link>
@@ -116,6 +146,11 @@ export default function HomePage() {
         title="Clase 4 · Navegación avanzada y Catch-All"
         subtitle="Grupos de rutas, useRouter(), useParams() y segmentos catch-all."
         rows={routesClass4}
+      />
+      <RoutesTable
+        title="Clase 5 · Estilos con Tailwind CSS"
+        subtitle="Utility-first, responsive, hover/focus, modo oscuro y clases condicionales."
+        rows={routesClass5}
       />
     </div>
   );
@@ -154,7 +189,7 @@ function RoutesTable({
                 <td className="px-4 py-3">
                   <Link
                     href={route.url}
-                    className="font-mono text-violet-700 hover:underline"
+                    className="font-mono text-pink-700 hover:underline"
                   >
                     {route.url}
                   </Link>

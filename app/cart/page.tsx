@@ -4,6 +4,7 @@
 // así que siempre vas a ver los mismos productos.
 
 import Link from "next/link";
+import ProductImage from "@/components/ProductImage";
 import { formatPrice, getProductById } from "@/lib/products";
 
 // Simulamos que el usuario ya agregó estos productos
@@ -35,13 +36,13 @@ export default function CartPage() {
               key={product.id}
               className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-white p-4"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-lg bg-zinc-100 text-3xl">
-                {product.emoji}
+              <span className="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg bg-zinc-100">
+                <ProductImage product={product} sizes="80px" />
               </span>
               <div className="flex-1">
                 <Link
                   href={`/products/${product.id}`}
-                  className="font-semibold hover:text-violet-700"
+                  className="font-semibold hover:text-pink-700"
                 >
                   {product.name}
                 </Link>
@@ -60,7 +61,7 @@ export default function CartPage() {
             <span>Total</span>
             <span>{formatPrice(total)}</span>
           </div>
-          <button className="mt-5 w-full rounded-lg bg-violet-600 px-5 py-3 font-semibold text-white hover:bg-violet-700">
+          <button className="mt-5 w-full rounded-lg bg-pink-600 px-5 py-3 font-semibold text-white hover:bg-pink-700">
             Finalizar compra
           </button>
         </aside>

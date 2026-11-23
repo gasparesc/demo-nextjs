@@ -23,7 +23,7 @@ export default function AnalyticsPage() {
             <span className="w-24 text-sm text-zinc-600">{item.month}</span>
             <div className="h-6 flex-1 rounded bg-zinc-100">
               <div
-                className="h-6 rounded bg-violet-500"
+                className="h-6 rounded bg-pink-500"
                 style={{ width: `${item.amount}%` }}
               />
             </div>

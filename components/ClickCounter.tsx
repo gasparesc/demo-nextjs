@@ -15,12 +15,12 @@ export default function ClickCounter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="mt-6 rounded-lg bg-violet-50 p-3 text-sm">
+    <div className="mt-6 rounded-lg bg-pink-50 p-3 text-sm">
       <p className="text-zinc-600">Estado del layout:</p>
-      <p className="my-1 text-2xl font-bold text-violet-700">{count}</p>
+      <p className="my-1 text-2xl font-bold text-pink-700">{count}</p>
       <button
         onClick={() => setCount(count + 1)}
-        className="w-full rounded-md bg-violet-600 px-3 py-1.5 font-medium text-white hover:bg-violet-700"
+        className="w-full rounded-md bg-pink-600 px-3 py-1.5 font-medium text-white hover:bg-pink-700"
       >
         Sumar +1
       </button>

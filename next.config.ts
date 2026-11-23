@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
   turbopack: {
     rules: {
       "*.css": {
+        // Los archivos .module.css (CSS Modules) se excluyen: Next.js los procesa solo,
+        // y si Tailwind también los tocara, las clases perderían su nombre único
+        // (styles["btn-primary--active"] daría undefined y el botón quedaría sin estilos).
+        condition: { not: { path: "*.module.css" } },
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
       },

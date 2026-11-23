@@ -37,7 +37,7 @@ export default function RegisterPage() {
         </label>
         <button
           type="submit"
-          className="rounded-lg bg-violet-600 px-4 py-2.5 font-semibold text-white hover:bg-violet-700"
+          className="rounded-lg bg-pink-600 px-4 py-2.5 font-semibold text-white hover:bg-pink-700"
         >
           Crear cuenta
         </button>
@@ -45,7 +45,7 @@ export default function RegisterPage() {
 
       <p className="mt-6 text-center text-sm text-zinc-600">
         ¿Ya tenés cuenta?{" "}
-        <Link href="/login" className="font-medium text-violet-700 hover:underline">
+        <Link href="/login" className="font-medium text-pink-700 hover:underline">
           Ingresá
         </Link>
       </p>

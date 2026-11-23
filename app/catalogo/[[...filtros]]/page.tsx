@@ -39,7 +39,7 @@ export default function CatalogPage() {
           // Navegación "activa" desde código con useRouter
           <button
             onClick={() => router.push("/catalogo")}
-            className="text-sm text-violet-700 hover:underline"
+            className="text-sm text-pink-700 hover:underline"
           >
             Limpiar filtros (router.push)
           </button>
@@ -61,7 +61,7 @@ export default function CatalogPage() {
 
       {/* Migas de pan armadas a partir del array */}
       <nav className="mt-3 flex flex-wrap items-center gap-1 text-sm text-zinc-500">
-        <Link href="/catalogo" className="hover:text-violet-700">
+        <Link href="/catalogo" className="hover:text-pink-700">
           catalogo
         </Link>
         {filtros.map((filtro, i) => (
@@ -69,7 +69,7 @@ export default function CatalogPage() {
             /
             <Link
               href={`/catalogo/${filtros.slice(0, i + 1).join("/")}`}
-              className="hover:text-violet-700"
+              className="hover:text-pink-700"
             >
               {filtro}
             </Link>

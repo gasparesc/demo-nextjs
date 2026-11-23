@@ -20,7 +20,10 @@ export default async function ProductsPage() {
         {products.length} productos disponibles. Elegí uno para ver el detalle.
       </p>
 
-      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Grilla responsive (clase 5), pensada mobile-first:
+          celular → 1 columna (grid-cols-1, sin prefijo)
+          md: (tablet) → 2 columnas · lg: (monitor) → 3 columnas */}
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

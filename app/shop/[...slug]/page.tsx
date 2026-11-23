@@ -54,7 +54,7 @@ export default async function ShopPage({
             <Link
               key={href}
               href={href}
-              className="rounded-md border border-zinc-300 bg-white px-3 py-1.5 font-mono hover:border-violet-400"
+              className="rounded-md border border-zinc-300 bg-white px-3 py-1.5 font-mono hover:border-pink-400"
             >
               {href}
             </Link>
