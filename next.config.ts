@@ -11,6 +11,16 @@ const nextConfig: NextConfig = {
   cacheComponents: false,
   partialPrefetching: false,
 
+  // Las imágenes que vienen de OTRO sitio (como las de la FakeStore API, clase 6) hay que
+  // autorizarlas acá. Es una medida de seguridad: así nadie puede usar tu servidor de Next.js
+  // para optimizar imágenes de cualquier página. Si te falta, <Image> tira un error que dice
+  // "hostname is not configured under images".
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "fakestoreapi.com", pathname: "/img/**" },
+    ],
+  },
+
   // Le dice a Turbopack (el compilador de Next) que procese los .css con Tailwind
   turbopack: {
     rules: {

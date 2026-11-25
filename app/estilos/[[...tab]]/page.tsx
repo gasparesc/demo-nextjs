@@ -9,7 +9,7 @@
 // Cada sección es un componente aparte dentro de components/estilos/,
 // así podés abrir el archivo de la que te interese sin perderte en un archivo gigante.
 
-import Image from "next/image";
+import LabHeader from "@/components/LabHeader";
 import DemoSection from "@/components/estilos/DemoSection";
 import TraditionalVsTailwind from "@/components/estilos/TraditionalVsTailwind";
 import UtilityPlayground from "@/components/estilos/UtilityPlayground";
@@ -32,45 +32,12 @@ const index = [
 export default function EstilosPage() {
   return (
     <div className="flex flex-col gap-8">
-      {/* Encabezado */}
-      {/* Encabezado con imagen de fondo y un poquito de desenfoque (blur):
-          - relative + overflow-hidden: contiene a la imagen y recorta lo que se sale.
-          - La imagen usa "fill" (-z-20) con blur-sm y scale-105: el zoom tapa los bordes
-            que el desenfoque deja transparentes.
-          - Una capa oscura (-z-10) encima hace que el texto blanco se lea bien. */}
-      <header className="relative isolate overflow-hidden rounded-2xl px-6 py-12 text-white sm:px-10 sm:py-16">
-        <Image
-          src="/gta/hero-gta6.jpg"
-          alt=""
-          fill
-          priority
-          sizes="(min-width: 1152px) 1152px, 100vw"
-          className="-z-20 scale-105 object-cover object-[75%_center] blur-sm md:object-center"
-        />
-        <div className="absolute inset-0 -z-10 bg-black/45" />
-
-        <p className="text-sm font-medium uppercase tracking-wide text-pink-200">
-          Clase 5 · Tailwind CSS
-        </p>
-        <h1 className="mt-2 text-3xl font-bold sm:text-4xl">Laboratorio de estilos 🎨</h1>
-        <p className="mt-3 max-w-2xl text-white/90">
-          Una sección por cada tema de la clase. Tocá, pasá el mouse y achicá la
-          ventana: todo lo que ves está hecho con clases de Tailwind escritas
-          directo en el JSX.
-        </p>
-
-        <nav className="mt-6 flex flex-wrap gap-2">
-          {index.map((label, i) => (
-            <a
-              key={label}
-              href={`#seccion-${i + 1}`}
-              className="rounded-full bg-white/20 px-3 py-1 text-sm font-medium backdrop-blur-sm hover:bg-white/35"
-            >
-              {i + 1}. {label}
-            </a>
-          ))}
-        </nav>
-      </header>
+      <LabHeader
+        eyebrow="Clase 5 · Tailwind CSS"
+        title="Laboratorio de estilos 🎨"
+        description="Una sección por cada tema de la clase. Tocá, pasá el mouse y achicá la ventana: todo lo que ves está hecho con clases de Tailwind escritas directo en el JSX."
+        items={index}
+      />
 
       <DemoSection
         number={1}

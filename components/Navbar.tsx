@@ -15,6 +15,7 @@ const links = [
   { href: "/products", label: "Productos" },
   { href: "/catalogo", label: "Catálogo" },
   { href: "/estilos", label: "Estilos" },
+  { href: "/fetching", label: "Fetching" },
   { href: "/cart", label: "Carrito" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/login", label: "Ingresar" },

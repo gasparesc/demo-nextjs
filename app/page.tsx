@@ -108,6 +108,30 @@ const routesClass5 = [
   },
 ];
 
+// Rutas de la clase 6: efectos y fetching de APIs
+const routesClass6 = [
+  {
+    file: "app/fetching/page.tsx",
+    url: "/fetching",
+    note: "Laboratorio: useEffect, custom hooks y fetch en el servidor",
+  },
+  {
+    file: "app/fetching/practica/page.tsx",
+    url: "/fetching/practica",
+    note: "Práctica: el catálogo con datos de mentira",
+  },
+  {
+    file: "app/fetching/productos/page.tsx",
+    url: "/fetching/productos",
+    note: "Práctica terminada: 20 productos reales de la API",
+  },
+  {
+    file: "app/fetching/productos/[id]/page.tsx",
+    url: "/fetching/productos/1",
+    note: "Detalle: fetch de un solo producto con params.id",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-10">
@@ -151,6 +175,11 @@ export default function HomePage() {
         title="Clase 5 · Estilos con Tailwind CSS"
         subtitle="Utility-first, responsive, hover/focus, modo oscuro y clases condicionales."
         rows={routesClass5}
+      />
+      <RoutesTable
+        title="Clase 6 · Efectos y fetching de APIs"
+        subtitle="useEffect, custom hooks, fetch en el servidor y caché, con datos reales de internet."
+        rows={routesClass6}
       />
     </div>
   );
