@@ -132,6 +132,25 @@ const routesClass6 = [
   },
 ];
 
+// Rutas de la clase 7: formularios
+const routesClass7 = [
+  {
+    file: "app/formularios/page.tsx",
+    url: "/formularios",
+    note: "Laboratorio: controlados, FormData, Server Actions y Zod",
+  },
+  {
+    file: "app/formularios/practica/RegistroForm.tsx",
+    url: "/formularios/practica",
+    note: "Práctica: el formulario que todavía no hace nada",
+  },
+  {
+    file: "app/formularios/registro/RegistroForm.tsx",
+    url: "/formularios/registro",
+    note: "Práctica terminada: Server Action + useActionState",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-10">
@@ -180,6 +199,11 @@ export default function HomePage() {
         title="Clase 6 · Efectos y fetching de APIs"
         subtitle="useEffect, custom hooks, fetch en el servidor y caché, con datos reales de internet."
         rows={routesClass6}
+      />
+      <RoutesTable
+        title="Clase 7 · Formularios en React y Next.js"
+        subtitle="Controlados, no controlados, validación, Server Actions, useActionState y React Hook Form + Zod."
+        rows={routesClass7}
       />
     </div>
   );

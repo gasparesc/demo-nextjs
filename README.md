@@ -14,6 +14,7 @@ Cada clase tiene su propia guía con un recorrido paso a paso. Te dicen qué abr
 | 4 | Navegación avanzada: `<Link>`, `useRouter`, grupos de rutas y catch-all | [README-CLASE-04.md](README-CLASE-04.md) |
 | 5 | Estilos con Tailwind CSS: utility-first, responsive, `hover:`, `dark:` y clases condicionales | [README-CLASE-05.md](README-CLASE-05.md) |
 | 6 | Efectos y fetching de APIs: `useEffect`, custom hooks, fetch en el servidor y caché | [README-CLASE-06.md](README-CLASE-06.md) |
+| 7 | Formularios: controlados, no controlados, validación, Server Actions, `useActionState` y React Hook Form + Zod | [README-CLASE-07.md](README-CLASE-07.md) |
 
 ## Cómo correrlo en tu compu
 
@@ -70,6 +71,11 @@ app/
 │   ├── error.tsx               → Pantalla de error si la API no responde
 │   ├── practica/page.tsx       → /fetching/practica  (el catálogo con datos de mentira, para practicar)
 │   └── productos/              → /fetching/productos y /fetching/productos/[id]  (el catálogo REAL, de la API)
+├── formularios/
+│   ├── page.tsx                → /formularios  (laboratorio de formularios y Server Actions)
+│   ├── actions.ts              → Las Server Actions del laboratorio ("use server")
+│   ├── practica/               → /formularios/practica  (el formulario que todavía no hace nada)
+│   └── registro/               → /formularios/registro  (la práctica terminada)
 ├── catalogo/
 │   ├── layout.tsx              → Menú de categorías + comparación <Link> vs <a>
 │   └── [[...filtros]]/page.tsx → /catalogo, /catalogo/ropa, /catalogo/ropa/remeras, ...
@@ -77,10 +83,11 @@ app/
     └── [...slug]/page.tsx      → /shop/ropa, /shop/ropa/remeras/verano, ...
 
 components/   → Piezas reutilizables: Navbar, Footer, Sidebar, ProductCard, AddToCartButton, etc.
-              components/estilos/ tiene las demos de la clase 5 y components/fetching/ las de la clase 6
+              components/estilos/, components/fetching/ y components/formularios/ tienen las demos de las clases 5, 6 y 7
 hooks/        → useFetch.ts: nuestro primer custom hook (clase 6)
 lib/          → products.ts: los datos de prueba y funciones para buscarlos y filtrarlos.
-              fakestore.ts: los tipos de los productos de la FakeStore API (clase 6)
+              fakestore.ts: los tipos de los productos de la FakeStore API (clase 6).
+              usuarios.ts y schemas/registro.ts: la "base de datos" de mentira y el esquema de Zod (clase 7)
 public/       → Archivos estáticos. logo.svg se usa en la Navbar como "/logo.svg".
               public/gta/ tiene las imágenes de los productos y la del inicio
 proxy.ts      → Se ejecuta antes de cada visita a /dashboard/* (mirá la terminal)
